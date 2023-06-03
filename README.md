@@ -33,9 +33,11 @@ To test the performance of our BPE and WordPiece models, we will apply them on t
 
 ## Results
 
-Our BPE model achieved a vocabulary size of 7216 tokens on the "Romeo and Juliet" book, while the WordPiece tokenizer
-achieved a vocabulary size of 38285 tokens. This significant difference in vocabulary size can have a significant impact
-on model performance, with a smaller vocabulary size generally leading to better model performance.
+On applying the BPE and WordPiece models on "Romeo and Juliet" we get the same vocabulary size of 38285 tokens.
+However, in general, BPE tends to produce a smaller vocabulary size than WordPiece, which can lead to better model
+performance in some cases. WordPiece is generally faster than BPE because it uses a more efficient merging strategy. BPE
+can handle rare words better than WordPiece because it can merge any pair of adjacent characters, whereas WordPiece can
+only merge pre-defined subwords.
 
 ### Byte Pair Encoding (BPE) Algorithm
 
@@ -72,6 +74,6 @@ vocabulary size. However, there are some differences between the two algorithms:
 
 ## Conclusion
 
-In conclusion, BPE and WordPiece are two popular tokenization techniques used in NLP pipelines for text compression and
-improved model performance. While both techniques achieve similar results, BPE generally has a smaller vocabulary size
-and can lead to better model performance.
+BPE and WordPiece are two effective text compression techniques that can improve model performance by reducing the
+vocabulary size. While both techniques achieve similar results, BPE generally has a smaller vocabulary size and can lead
+to better model performance in some cases.
